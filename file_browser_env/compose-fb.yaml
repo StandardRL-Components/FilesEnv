@@ -1,0 +1,10 @@
+version: '3'
+services:
+  fb_service:
+    image: ubuntu-files
+    security_opt:
+      - seccomp:unconfined
+    environment:
+        VNC_ENCODING: hextile
+        VNC_LISTENING_PORT: 5901
+    restart: unless-stopped
